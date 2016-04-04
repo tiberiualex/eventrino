@@ -1,6 +1,7 @@
 # Source and test files
 src/
 test/
+localtest/
 
 # Configuration files
 .babelrc
