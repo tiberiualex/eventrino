@@ -10,4 +10,5 @@ test/
 gulpfile.js
 karma.conf.js
 LICENSE
+README.md
 package.json
