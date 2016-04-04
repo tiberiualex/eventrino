@@ -2,7 +2,7 @@
   "name": "eventrino",
   "version": "0.1.2",
   "description": "Event handling micro-library",
-  "main": "eventrino.js",
+  "main": "lib/eventrino.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
