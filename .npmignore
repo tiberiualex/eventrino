@@ -1,11 +1,13 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+# Source and test files
+src/
+test/
 
-# Other files and folders
-.settings/
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Configuration files
+.babelrc
+.gitignore
+.jshintrc
+.npmignore
+gulpfile.js
+karma.conf.js
+LICENSE
+package.json

@@ -45,19 +45,6 @@ describe('Eventrino: ', function() {
       });
     });
 
-    describe('bounded to an object', function() {
-      beforeEach(function() {
-        this.callback = spy();
-
-        eventrino.subscribe(this.event, this.callback, 'test:listener', undefined, this.context);
-        eventrino.broadcast(this.event);
-      });
-
-      it('the value of this inside the listeners should be that object', function() {
-        expect(this.callback.calledOn(this.context)).to.be.equal(true);
-      });
-    });
-
     describe('with identifiers that already exist', function() {
       beforeEach(function() {
         eventrino.subscribe(this.event, this.callback1, 'test:override', undefined, this.context);
@@ -83,7 +70,7 @@ describe('Eventrino: ', function() {
         this.data = { testdata: 'testdata' };
         eventrino.subscribe(this.event, this.callback1);
         eventrino.subscribe(this.event, this.callback2);
-        eventrino.broadcast(this.event, 'global', this.data);
+        eventrino.broadcast(this.event, undefined, this.data);
       });
 
       it('should call the listeners with that data', function() {
@@ -133,6 +120,7 @@ describe('Eventrino: ', function() {
         eventrino.subscribe(this.event, this.callback1, undefined, this.context);
         eventrino.subscribe(this.event, this.callback2, undefined, this.context);
         eventrino.unsubscribe(this.event, this.context);
+        eventrino.broadcast(this.event, this.context);
       });
 
       it('should remove all the listeners for the event from that context', function() {
